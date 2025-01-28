@@ -1,9 +1,9 @@
-
+import SearchBar from "./filters/SearchBar"
 const Header = () => {
   return (
-    <div>
-
-    </div>
+    <header>
+      <SearchBar />
+    </header>
   )
 }
 
