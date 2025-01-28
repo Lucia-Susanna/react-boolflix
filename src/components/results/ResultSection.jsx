@@ -2,12 +2,12 @@ import Card from "./Card"
 const ResultSection = (prop) => {
   const list = prop.list
   return (
-    <section>
-      <ul>
-        {list.map(item => (
-          <Card item={item} />
-        ))}
-      </ul>
+    <section className="row">
+
+      {list.map(item => (
+        <Card key={item.id} item={item} />
+      ))}
+
 
     </section>
   )

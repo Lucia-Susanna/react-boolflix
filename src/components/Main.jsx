@@ -1,14 +1,18 @@
 import ResultSection from "./results/ResultSection"
 import { useGlobalContext } from "../contexts/GlobalContext"
 const Main = () => {
-  const { movieList } = useGlobalContext()
+  const { moviesList, seriesList } = useGlobalContext()
 
   return (
-    <div>
-      <h2>elenco dei film:</h2>
-      <ResultSection list={movieList} />
+    <main>
+      <div className="container">
+        <h2>{moviesList.length > 0 ? 'Elenco dei film:' : 'cerca un film'}</h2>
+        <ResultSection list={moviesList} />
+        <h2>Elenco serie TV:</h2>
+        <ResultSection list={seriesList} />
 
-    </div>
+      </div>
+    </main>
   )
 }
 
