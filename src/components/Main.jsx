@@ -8,7 +8,7 @@ const Main = () => {
       <div className="container">
         <h2>{moviesList.length > 0 ? 'Elenco dei film:' : 'cerca un film'}</h2>
         <ResultSection list={moviesList} />
-        <h2>Elenco serie TV:</h2>
+        <h2>{seriesList.length > 0 && 'Elenco serie TV:'}</h2>
         <ResultSection list={seriesList} />
 
       </div>

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -36,6 +40,7 @@ header {
 main {
   background-color: lightgrey;
 
+
   h2 {
     padding: 30px 0;
   }
@@ -45,5 +50,7 @@ main {
     margin: 5px;
     padding: 15px;
     width: calc(100% / 6 - 10px);
+
+
   }
 }
