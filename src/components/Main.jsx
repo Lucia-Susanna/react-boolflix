@@ -1,7 +1,7 @@
 import ResultSection from "./results/ResultSection"
 import { useGlobalContext } from "../contexts/GlobalContext"
 const Main = () => {
-  const { moviesList, seriesList } = useGlobalContext()
+  const { moviesList, seriesList, } = useGlobalContext()
 
   return (
     <main>

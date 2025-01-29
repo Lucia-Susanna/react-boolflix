@@ -18,39 +18,94 @@ img {
   flex-wrap: wrap;
 }
 
-header {
-  background-color: black;
-  height: 70px;
-  padding: 0 150px;
+body {
+  font-family: "Roboto", serif;
 
-  .container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: space-between;
+  header {
 
-    h1 {
-      color: red;
-      text-transform: uppercase;
+    background-color: black;
+    height: 70px;
+
+    .container {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-content: space-between;
+
+      h1 {
+        color: red;
+        text-transform: uppercase;
+        font-family: "Antonio", serif;
+        font-size: 3rem;
+        font-weight: 300;
+        padding-bottom: 10px;
+        transform: perspective(40px) rotateX(10deg);
+      }
+
+
+      .searchBar {
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+
+        button {
+          background: none;
+          padding: 3px;
+          color: grey;
+          margin-left: 5px;
+          font-size: 1.2rem;
+          border: 0cap;
+
+          &:hover {
+            opacity: 80%;
+          }
+        }
+
+        input {
+          padding: 5px;
+          border: 0cap;
+          background-color: lightgray;
+          border-radius: 2px;
+
+        }
+      }
     }
+
   }
 
-}
-
-main {
-  background-color: lightgrey;
+  main {
+    background-color: lightgrey;
 
 
-  h2 {
-    padding: 30px 0;
-  }
+    h2 {
+      padding: 30px 0;
+    }
 
-  .card {
-    background-color: aliceblue;
-    margin: 5px;
-    padding: 15px;
-    width: calc(100% / 6 - 10px);
+    .card {
+      background-color: aliceblue;
+      margin: 5px;
+      position: relative;
 
+      .detail {
+        position: absolute;
+        top: 0;
+        color: whitesmoke;
+        width: 342px;
+        height: 500px;
+        background-color: black;
+        display: none;
+        padding: 20px;
 
+        .overview {
+          height: 60%;
+          overflow: auto;
+        }
+      }
+
+      &:hover .detail {
+        display: block;
+      }
+
+    }
   }
 }

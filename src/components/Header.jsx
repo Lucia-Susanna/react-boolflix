@@ -3,7 +3,7 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <h1>booflix</h1>
+        <h1>boolflix</h1>
         <SearchBar />
       </div>
     </header>

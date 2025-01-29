@@ -30,7 +30,6 @@ const GlobalProvider = ({ children }) => {
       })
   }
 
-
   return (
     <GlobalContext.Provider value={{ searchData, handleSearch, fetchData, moviesList, seriesList }}>
       {children}

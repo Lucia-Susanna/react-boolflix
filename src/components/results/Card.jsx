@@ -1,9 +1,9 @@
 import { FaRegStar, FaStar } from "react-icons/fa"
 
 const Card = (props) => {
-  const { id, title, name, original_title, origiale_name, original_language, vote_average, poster_path } = props.item
+  const { id, title, name, original_title, origiale_name, original_language, vote_average, poster_path, overview } = props.item
 
-  function printStars(rate) {
+  const printStars = (rate) => {
     let starsRating = []
     let formatRate = Math.round(rate / 2)
 
@@ -15,21 +15,21 @@ const Card = (props) => {
       }
 
     }
-    console.log(starsRating);
-
     return starsRating
   }
 
-
-  console.log(printStars(vote_average));
-
   return (
     <div className="card">
-      <img src={poster_path ? `https://image.tmdb.org/t/p/w200${poster_path}` : 'https://placehold.co/200x300'} alt={title} />
-      <h5>{title || name}</h5>
-      <p>{original_title || origiale_name}</p>
-      <img src={`https://flagsapi.com/${original_language === 'en' ? 'GB' : original_language.toUpperCase()}/flat/32.png`} alt={original_language.toUpperCase()} />
-      <p className="rating"> {printStars(vote_average)} </p>
+      <div className="cover">
+        <img src={poster_path ? `https://image.tmdb.org/t/p/w342${poster_path}` : 'https://placehold.co/342x500'} alt={title} />
+      </div>
+      <div className="detail">
+        <h3>Titolo: {title || name}</h3>
+        <p>Titolo originale: {original_title || origiale_name}</p>
+        <p className="overview">Descrizione:{overview}</p>
+        <img src={`https://flagsapi.com/${original_language === 'en' ? 'GB' : original_language.toUpperCase()}/flat/32.png`} alt={original_language.toUpperCase()} />
+        <p className="rating"> Voto: {printStars(vote_average)} </p>
+      </div>
     </div>
   )
 }
